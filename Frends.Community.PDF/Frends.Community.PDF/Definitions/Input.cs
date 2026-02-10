@@ -1,4 +1,4 @@
-﻿namespace Frends.Community.PDF.Definitions;
+﻿namespace Frends.Community.PdfMerge.Definitions;
 
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,9 +10,9 @@ using System.ComponentModel.DataAnnotations;
 public class Input
 {
     /// <summary>
-    /// Something that will be repeated.
+    /// List of PDF files to merge
     /// </summary>
-    /// <example>Some example of the expected value</example>
+    /// <example>new List&lt;byte[]&gt; { File.ReadAllBytes(@"C:\path\to\document1.pdf"), File.ReadAllBytes(@"C:\path\to\document2.pdf") }</example>
     [DisplayName("PDF file")]
     [DisplayFormat(DataFormatString = "Expression")]
     [DefaultValue("")]

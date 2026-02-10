@@ -1,10 +1,10 @@
-namespace Frends.Community.PDF.Tests;
+namespace Frends.Community.PdfMerge.Tests;
 
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using Frends.Community.PDF.Definitions;
+using Frends.Community.PdfMerge.Definitions;
 using NUnit.Framework;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;

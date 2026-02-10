@@ -1,7 +1,7 @@
 ﻿{
 	"Tasks": [
 		{
-			"TaskMethod": "Frends.Community.PDF.PDF.MergePages"
+			"TaskMethod": "Frends.Community.PdfMerge.PDF.MergePages"
 		}
 	]
 }

@@ -1,7 +1,7 @@
-﻿namespace Frends.Community.PDF.Definitions;
+﻿namespace Frends.Community.PdfMerge.Definitions;
 
 /// <summary>
-/// Result class usually contains properties of the return object.
+/// Result of PDF merge operation containing the merged PDF file.
 /// </summary>
 public class Result
 {
@@ -11,8 +11,8 @@ public class Result
     }
 
     /// <summary>
-    /// Contains the input repeated the specified number of times.
+    /// The merged PDF file as a byte array.
     /// </summary>
-    /// <example>Example of the output</example>
+    /// <example>File.WriteAllBytes(@"C:\path\to\merged.pdf", result.OutputFileBytes)</example>
     public byte[] OutputFileBytes { get; private set; }
 }

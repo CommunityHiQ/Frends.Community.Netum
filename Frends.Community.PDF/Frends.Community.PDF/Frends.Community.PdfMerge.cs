@@ -1,10 +1,10 @@
-﻿namespace Frends.Community.PDF;
+﻿namespace Frends.Community.PdfMerge;
 
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Threading;
-using Frends.Community.PDF.Definitions;
+using Frends.Community.PdfMerge.Definitions;
 using PdfSharp.Pdf;
 using PdfSharp.Pdf.IO;
 
@@ -15,7 +15,7 @@ public static class PDF
 {
     /// <summary>
     /// Task for merging PDF pages into a single document
-    /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends.Community.PDF).
+    /// [Documentation](https://tasks.frends.com/tasks/frends-tasks/Frends.Community.PdfMerge).
     /// </summary>
     /// <param name="input">A list of page byte arrays to merge</param>
     /// <param name="cancellationToken">Cancellation token given by Frends.</param>
