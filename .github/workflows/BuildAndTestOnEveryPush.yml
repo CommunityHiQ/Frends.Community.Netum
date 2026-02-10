@@ -14,13 +14,13 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Build
-      run: dotnet build
+      run: dotnet build Frends.Community.PdfMerge\Frends.Community.PdfMerge.sln
     
     - name: Test
-      run: dotnet test
+      run: dotnet test Frends.Community.PdfMerge\Frends.Community.PdfMerge.sln
       
     - name: Pack release version of task
-      run: dotnet pack --configuration Release --include-source
+      run: dotnet pack Frends.Community.PdfMerge\Frends.Community.PdfMerge\Frends.Community.PdfMerge.csproj --configuration Release --include-source
       
     - name: Push NuGet package to the testfeed
-      run: dotnet nuget push Frends.Community.PdfMerge\bin\Release\Frends.Community.PdfMerge.*.nupkg  --api-key ${{ secrets.COMMUNITY_FEED_API_KEY }} --source https://www.myget.org/F/frends-community-test/api/v2/package
+      run: dotnet nuget push Frends.Community.PdfMerge\Frends.Community.PdfMerge\bin\Release\Frends.Community.PdfMerge.*.nupkg  --api-key ${{ secrets.COMMUNITY_FEED_API_KEY }} --source https://www.myget.org/F/frends-community-test/api/v2/package
