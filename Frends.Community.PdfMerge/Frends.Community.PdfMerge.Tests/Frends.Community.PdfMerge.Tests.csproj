@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Frends.Community.PDF\Frends.Community.PDF.csproj" />
+    <ProjectReference Include="..\Frends.Community.PdfMerge\Frends.Community.PdfMerge.csproj" />
   </ItemGroup>
 
   <ItemGroup>
