@@ -14,10 +14,10 @@ jobs:
     - uses: actions/checkout@v1
 
     - name: Build
-      run: dotnet build Frends.Community.PdfMerge\Frends.Community.PdfMerge.sln
+      run: dotnet build Frends.Community.PdfMerge.sln
     
     - name: Test
-      run: dotnet test Frends.Community.PdfMerge\Frends.Community.PdfMerge.sln
+      run: dotnet test Frends.Community.PdfMerge.sln
       
     - name: Pack release version of task
-      run: dotnet pack Frends.Community.PdfMerge\Frends.Community.PdfMerge\Frends.Community.PdfMerge.csproj --configuration Release --include-source
+      run: dotnet pack Frends.Community.PdfMerge\Frends.Community.PdfMerge.csproj --configuration Release --include-source
