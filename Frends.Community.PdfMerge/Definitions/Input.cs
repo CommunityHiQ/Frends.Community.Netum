@@ -12,7 +12,7 @@ public class Input
     /// <summary>
     /// List of PDF files to merge
     /// </summary>
-    /// <example>new List&lt;byte[]&gt; { File.ReadAllBytes(@"C:\path\to\document1.pdf"), File.ReadAllBytes(@"C:\path\to\document2.pdf") }</example>
+    /// <example>new List&lt;byte[]&gt; { new byte[] { 0x25, 0x50 }, new byte[] { 0x44, 0x46 } }</example>
     [DisplayName("PDF file")]
     [DisplayFormat(DataFormatString = "Expression")]
     [DefaultValue("")]

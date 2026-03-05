@@ -13,6 +13,6 @@ public class Result
     /// <summary>
     /// The merged PDF file as a byte array.
     /// </summary>
-    /// <example>File.WriteAllBytes(@"C:\path\to\merged.pdf", result.OutputFileBytes)</example>
+    /// <example>new byte[] { 0x25, 0x50, 0x44, 0x46 }</example>
     public byte[] OutputFileBytes { get; private set; }
 }
