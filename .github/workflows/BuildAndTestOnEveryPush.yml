@@ -1,0 +1,23 @@
+name: BuildAndTestOnEveryPush.yml
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  build:
+    name: Build on windows-latest
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Build
+      run: dotnet build Frends.Community.PdfMerge.sln
+    
+    - name: Test
+      run: dotnet test Frends.Community.PdfMerge.sln
+      
+    - name: Pack release version of task
+      run: dotnet pack Frends.Community.PdfMerge\Frends.Community.PdfMerge.csproj --configuration Release --include-source
