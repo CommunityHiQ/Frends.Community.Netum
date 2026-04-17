@@ -35,7 +35,8 @@ public static class PDF
                 outputPDFDocument.AddPage(page);
             }
         }
-        using MemoryStream outputStream = new();
+
+        using MemoryStream outputStream = new ();
         outputPDFDocument.Save(outputStream, false);
         byte[] outputBytes = outputStream.ToArray();
 

@@ -1,15 +1,37 @@
-# Frends.Community.PdfMerge
-This Frends task can merge multiple PDFs into one.
+# Frends Community PDF Tasks
+
+This repository contains **Frends Community PDF tasks** for working with PDF documents in the Frends platform.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
+## Available Tasks
+
+This repository includes two separate NuGet packages:
+
+- **[Frends.Community.PdfMerge](#frends-community-pdf-merge)** - Merge multiple PDF files into one
+- **[Frends.Community.PdfSplitter](#frends-community-pdf-splitter)** - Split PDF files into individual pages
+
 ## Installing
 
-You can install the Task via Frends UI Task View.
+You can install either task via Frends UI Task View or NuGet Package Manager:
 
-# Tasks
-## MergePages
-### Task Parameters
+```bash
+# Install PDF Merge functionality
+Install-Package Frends.Community.PdfMerge
+
+# Install PDF Splitter functionality  
+Install-Package Frends.Community.PdfSplitter
+```
+
+---
+
+# Frends Community PDF Merge
+
+Merge multiple PDF files into a single document.
+
+## MergePages Task
+
+### Parameters
 
 | Property    | Type         | Description                              | Example                       |
 |-------------|--------------|------------------------------------------|-------------------------------|
@@ -21,33 +43,76 @@ You can install the Task via Frends UI Task View.
 |-----------------|----------|----------------------------------|-------------------------------|
 | OutputFileBytes | byte[]   | Merged PDF file as byte array    | result.OutputFileBytes         |
 
+---
+
+# Frends Community PDF Splitter
+
+Split PDF files into individual pages as separate documents.
+
+## SplitPages Task
+
+### Parameters
+
+| Property | Type   | Description                | Example           |
+|----------|--------|----------------------------|-------------------|
+| Path     | string | Full path to PDF file      | "C:\\temp\\doc.pdf" |
+
+### Result
+
+| Property | Type          | Description                           | Example           |
+|----------|---------------|---------------------------------------|-------------------|
+| Output   | List<byte[]>  | List of split pages as byte arrays    | result.Output[0]  |
+
+---
 
 ## Building
 
-### Clone a copy of the repository
+### Clone the repository
 
-`git clone https://github.com/FrendsPlatform/Frends.Community.Netum.git`
+```bash
+git clone https://github.com/FrendsPlatform/Frends.Community.Netum.git
+cd Frends.Community.Netum
+```
 
-### Build the project
+### Build all projects
 
-`dotnet build`
+```bash
+dotnet build Frends.Community.Netum.sln
+```
 
 ### Run tests
 
-Run the tests
+```bash
+dotnet test Frends.Community.Netum.sln
+```
 
-`dotnet test`
+### Create NuGet packages
 
-### Create a NuGet package
+```bash
+# Build both packages
+dotnet pack Frends.Community.PdfMerge --configuration Release
+dotnet pack Frends.Community.PdfSplitter --configuration Release
+```
 
-`dotnet pack --configuration Release`
+## Project Structure
 
-### Third party licenses
+```
+Frends.Community.Netum/
+├── Frends.Community.PdfMerge/              # PDF merging functionality
+├── Frends.Community.PdfMerge.Tests/        # Tests for merge functionality
+├── Frends.Community.PdfSplitter/           # PDF splitting functionality
+├── Frends.Community.PdfSplitter.Tests/     # Tests for splitter functionality
+└── Frends.Community.Netum.sln              # Solution file
+```
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Third Party Licenses
+
+- This project is licensed under the MIT License - see the LICENSE file for details
+- Uses [PdfSharp](https://github.com/empira/PDFsharp) library for PDF manipulation
 
 ## Changelog
 
-| Version | Date       | Description                |
-|---------|------------|----------------------------|
-| 1.0.0   | 2025-06-11 | Initial version of MergePDF|
+| Version | Date       | Task      | Description                    |
+|---------|------------|-----------|--------------------------------|
+| 1.0.0   | 2025-06-11 | PdfMerge  | Initial version of MergePDF    |
+| 1.0.0   | 2026-04-17 | PdfSplitter | Initial version of SplitPages |

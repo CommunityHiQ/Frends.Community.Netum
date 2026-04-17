@@ -8,10 +8,10 @@
 		<Copyright>Frends</Copyright>
 		<Company>Frends</Company>
 		<Product>Frends</Product>
-		<PackageTags>Frends;PDF;Merge;Document;Community</PackageTags>
+		<PackageTags>Frends;PDF;Split;Document;Community</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-		<Description>Frends Community task for merging multiple PDF documents into a single file</Description>
+		<Description>Frends Community task for splitting PDF documents into individual pages</Description>
 		<PackageProjectUrl>https://frends.com/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/FrendsPlatform/Frends.Community.Netum</RepositoryUrl>
 	</PropertyGroup>
